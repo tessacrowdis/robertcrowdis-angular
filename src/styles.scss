@@ -1,1 +1,12 @@
-/* You can add global styles to this file, and also import other style files */
+
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+
+body {
+  color: seashell;
+  background-color: #2E2A27;
+  font-family: Roboto;
+  padding: 10vw;
+  vertical-align: center;
+  line-height: 1.8em;
+}
