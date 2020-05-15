@@ -1,0 +1,10 @@
+<div id="footer">
+  <span>Select a style: </span>
+  <span class="layout-option" [ngClass]="{ 'selected': style === 'custom' }"
+    (click)="selectLayout('custom')">Robbie's Layout (default)
+  </span>
+  <span> or </span>
+  <span class="layout-option --unused" [ngClass]="{ 'selected': style === 'material' }">
+    Angular Material (coming soon)
+  </span>
+</div>

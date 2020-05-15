@@ -26,4 +26,13 @@ export class AppComponent implements OnInit, OnDestroy {
   ngOnDestroy() {
     if (this._layoutSubscription$) { this._layoutSubscription$.unsubscribe(); }
   }
+
+  /**
+   * Changes the user's layout using the layout service as a controller.
+   *
+   * @param layoutStyle String of the style to set for the current and future sessions.
+   */
+  public setLayout(layoutStyle: string) {
+    this._ls.setLayout(layoutStyle);
+  }
 }
