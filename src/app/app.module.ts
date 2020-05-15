@@ -7,13 +7,17 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { MaterialModule } from './shared/material.module';
 import { SharedModule } from './shared/shared.module';
+import { CoreModule } from './core/core.module';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
+    CoreModule.forRoot(),
     AppRoutingModule,
     BrowserAnimationsModule,
     MaterialModule,

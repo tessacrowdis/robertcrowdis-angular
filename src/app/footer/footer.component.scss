@@ -1,0 +1,28 @@
+#footer {
+  position: absolute;
+  display: block;
+  text-align: center;
+  height: 48px;
+  bottom: 0px;
+  background-color: transparent; // TODO: Set this in the future, once my palette is decided on - RC 5/15/20
+  width: 100%;
+}
+
+.layout-option {
+  color: orange;
+  cursor: pointer;
+  transition: color .20s ease-in-out;
+  &:hover {
+    color: darkorange;
+  }
+
+  &.--unused {
+    color: lightgray !important;
+    cursor: not-allowed;
+  }
+}
+
+.selected {
+  color: green !important;
+  cursor: default;
+}
