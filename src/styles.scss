@@ -33,10 +33,10 @@ $robertcrowdis-angular-theme: mat-light-theme($robertcrowdis-angular-primary, $r
 body {
   color: seashell;
   background-color: #2E2A27;
-  font-family: Roboto;
-  padding: 10vw;
   vertical-align: center;
+  font-family: Roboto, "Helvetica Neue", sans-serif; 
   line-height: 1.8em;
+  width: 100vw;
+  margin: 0;
 }
 html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
