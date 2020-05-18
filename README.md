@@ -1,27 +1,21 @@
-# RobertcrowdisAngular
+# A little bit about my website
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.2.3.
 
-## Development server
+## Setup
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Run `ng serve`. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
-## Code scaffolding
+### Isn't it overkill to make a website in Angular?
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Yes, but I wanted to create a project with the intention of showing what I'm capable of as a web developer It is not only a live portfolio but also a showcasing of my skills and code practices. This includes the following:
 
-## Build
+* Writing meaningful commit messages, working with Git branches and master in a proper manner.
+* Managing state with RxJs and handling asynchronous code.
+* Styling with a commercial UI library such as Angular Material.
+* Designing websites with accessibility and the end user in mind.
+* Animations (In development...)
+* Working with a REST endpoint (In development...)
+* Show off components that I create (In development...)
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+This is the first update of the Readme, and there is more to come for sure - so check back soon!
