@@ -11,13 +11,15 @@ import { AppComponent } from './app.component';
 import { FooterComponent } from './footer/footer.component';
 import { AboutComponent } from './about/about.component';
 import { ToolbarComponent } from './toolbar/toolbar.component';
+import { TransitionComponent } from './transition/transition.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     FooterComponent,
     AboutComponent,
-    ToolbarComponent
+    ToolbarComponent,
+    TransitionComponent
   ],
   imports: [
     BrowserModule,

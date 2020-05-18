@@ -16,9 +16,10 @@ import { filter, map } from 'rxjs/operators';
 export class AppComponent implements OnInit, OnDestroy {
 
   private _layoutSubscription$: Subscription;
+  private _transitionStateSubscription$: Subscription;
   private _defaultTitle = 'RC';
 
-
+  public changingLayout: boolean;
   public layoutStyle: string;
   public pageTitle: string;
 
@@ -29,6 +30,7 @@ export class AppComponent implements OnInit, OnDestroy {
    * @param _ts A service that can be used to get and set the title of a current HTML document.
    */
   constructor(private _ls: LayoutService, private _route: ActivatedRoute, private _router: Router, private _ts: Title) { }
+
   ngOnInit() {
     this.pageTitle = this._ts.getTitle();
 
@@ -56,6 +58,11 @@ export class AppComponent implements OnInit, OnDestroy {
     this._layoutSubscription$ = this._ls.layout.subscribe((layout: string) => {
       this.layoutStyle = layout;
     });
+
+    // Subscribe to the state of animation to pass into the transition component
+    this._transitionStateSubscription$ = this._ls.transitionState.subscribe((isAnimating: boolean) => {
+      this.changingLayout = isAnimating;
+    });
   }
 
   ngOnDestroy() {
@@ -70,4 +77,5 @@ export class AppComponent implements OnInit, OnDestroy {
   public setLayout(layoutStyle: string) {
     this._ls.setLayout(layoutStyle);
   }
+
 }

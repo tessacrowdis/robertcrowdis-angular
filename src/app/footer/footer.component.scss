@@ -11,18 +11,18 @@
 .layout-option {
   color: orange;
   cursor: pointer;
-  transition: color .20s ease-in-out;
+  padding: 16px 6px;
+  transition: all .20s ease-in-out;
+  border-radius: 12px;
   &:hover {
     color: darkorange;
-  }
-
-  &.--unused {
-    color: lightgray !important;
-    cursor: not-allowed;
+    background-color: rgba(0,0,0,0.3);
   }
 }
 
-.selected {
-  color: green !important;
-  cursor: default;
+// TODO: Change button styling for mobile users - RC 5/18/20
+@media (max-width: 800px) {
+  #footer {
+    position: relative;
+  }
 }
