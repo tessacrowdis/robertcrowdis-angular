@@ -10,6 +10,7 @@ import { Subscription } from 'rxjs';
 export class AppComponent implements OnInit, OnDestroy {
 
   private _layoutSubscription$: Subscription;
+
   public layoutStyle: string;
 
   /**
