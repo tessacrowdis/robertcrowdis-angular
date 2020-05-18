@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { ReplaySubject } from 'rxjs';
+import { ReplaySubject, BehaviorSubject } from 'rxjs';
 
 
 /**
@@ -11,24 +11,28 @@ import { ReplaySubject } from 'rxjs';
 export class LayoutService {
 
   private _layout$: ReplaySubject<string> = new ReplaySubject<string>();
+  private _transitionState$: BehaviorSubject<boolean> = new BehaviorSubject<boolean>(false);
 
   constructor() {
     this.instantiateLayout();
   }
 
-
+  /**
+   * Getter function for the current layout selected by the user.
+   *
+   * @returns Observable that contains a string value with the currently selected layout.
+   */
   get layout() {
     return this._layout$;
   }
 
   /**
-   * Sets a string inside of the browser's local storage session, to save styling between visits of the website.
+   * Getter function for the state of transitioning animation.
    *
-   * @param layoutType String containing 'material' or 'custom'. Default is 'material'
+   * @returns Observable that contains the state of animation happening.
    */
-  public setLayout(layoutType: string): void {
-    localStorage.setItem('layout', layoutType);
-    this._layout$.next(layoutType);
+  get transitionState() {
+    return this._transitionState$;
   }
 
   /**
@@ -45,6 +49,21 @@ export class LayoutService {
       }
       this._layout$.next('custom');
     }
+  }
+
+  /**
+   * Sets a string inside of the browser's local storage session, to save styling between visits of the website.
+   * Also triggers an animation state for the transition to begin.
+   *
+   * @param layoutType String containing 'material' or 'custom'. Default is 'material'.
+   */
+  public setLayout(layoutType: string): void {
+    localStorage.setItem('layout', layoutType);
+    this._transitionState$.next(true);
+    setTimeout(() => {
+      this._layout$.next(layoutType);
+      this._transitionState$.next(false);
+    }, 500);
   }
 
 }
