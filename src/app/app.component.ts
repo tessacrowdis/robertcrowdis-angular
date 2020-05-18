@@ -20,6 +20,7 @@ export class AppComponent implements OnInit, OnDestroy {
 
 
   public layoutStyle: string;
+  public pageTitle: string;
 
   /**
    * @param _ls Handles the layout of the application between either Material Design and the original website design.
@@ -29,6 +30,7 @@ export class AppComponent implements OnInit, OnDestroy {
    */
   constructor(private _ls: LayoutService, private _route: ActivatedRoute, private _router: Router, private _ts: Title) { }
   ngOnInit() {
+    this.pageTitle = this._ts.getTitle();
 
     // Subscribe to the router and provide updates to the document title based on the current route.
     this._router.events.pipe(
@@ -45,6 +47,7 @@ export class AppComponent implements OnInit, OnDestroy {
         }
       })
     ).subscribe((pageTitle: string) => {
+      this.pageTitle = pageTitle;
       const fullTitle = `${pageTitle} | Robert Crowdis`;
       this._ts.setTitle(fullTitle);
     });

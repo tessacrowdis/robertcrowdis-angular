@@ -1,0 +1,39 @@
+#custom-toolbar {
+  height: 64px;
+  width: 100%;
+  color: white;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+
+  .toolbar-option {
+    padding: 8px 12px;
+    transition: color .25s ease-in-out;
+    box-sizing: border-box;
+    &:hover {
+      cursor: pointer;
+      color: orange;
+    }
+  
+    &.router-link-active {
+      border-bottom: 2px solid darkgray;
+    }
+  }
+
+  .toolbar-spacer {
+    margin: auto 20px;
+  }
+}
+
+
+
+.spacer {
+  flex: 1 1 auto;
+}
+
+#material-toolbar {
+  > .router-link-active {
+    background-color: darkgray;
+  }
+}
