@@ -10,12 +10,14 @@ import { SharedModule } from './shared/shared.module';
 import { AppComponent } from './app.component';
 import { FooterComponent } from './footer/footer.component';
 import { AboutComponent } from './about/about.component';
+import { ToolbarComponent } from './toolbar/toolbar.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     FooterComponent,
-    AboutComponent
+    AboutComponent,
+    ToolbarComponent
   ],
   imports: [
     BrowserModule,
