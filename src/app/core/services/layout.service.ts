@@ -36,7 +36,12 @@ export class LayoutService {
     return this._transitionState$;
   }
 
-  private _appendNewStyling(layout: string) {
+  /**
+   * Applies a new dynamic stylesheet to the website depending on the layout selected by the user.
+   *
+   * @param layout Layout selected by the user (choice between 'material' and 'custom')
+   */
+  private _appendNewStyling(layout: string): void {
     const cssFile = layout === 'material' ? 'material.css' : 'default.css';
     const headEl = this._document.getElementsByTagName('head')[0];
     console.log(headEl);
