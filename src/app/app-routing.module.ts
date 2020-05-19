@@ -24,11 +24,11 @@ const routes: Routes = [
     component: AboutComponent,
     data: { title: 'Work' }
   },
-  // {
-  //   path: '**',
-  //   component: AboutComponent,
-  //   data: { title: 'DNE' }
-  // }
+  { // TODO: Look into how this redirect is handled on the DNS - base path might be 'striking' here by mistake - RC 5/19/20
+    path: '**',
+    component: AboutComponent,
+    data: { title: 'Home' }
+  }
 ];
 
 @NgModule({
