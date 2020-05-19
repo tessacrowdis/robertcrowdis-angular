@@ -1,3 +1,5 @@
+@import '../../scss/colors';
+
 #footer {
   position: absolute;
   display: block;
@@ -8,19 +10,10 @@
   width: 100%;
 }
 
-.layout-option {
-  color: orange;
-  cursor: pointer;
-  padding: 16px 6px;
-  transition: all .20s ease-in-out;
-  border-radius: 12px;
-  &:hover {
-    color: darkorange;
-    background-color: rgba(0,0,0,0.3);
-  }
+#footnote {
+  font-size: 12px;
 }
 
-// TODO: Change button styling for mobile users - RC 5/18/20
 @media (max-width: 800px) {
   #footer {
     position: relative;
