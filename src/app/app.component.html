@@ -1,5 +1,5 @@
 <!-- Toolbar -->
-<!-- <app-toolbar [style]="layoutStyle" [pageTitle]="pageTitle"></app-toolbar> -->
+<app-toolbar [style]="layoutStyle" [pageTitle]="pageTitle" (selectLayoutEvent)="setLayout($event)"></app-toolbar>
 
 <!-- Page Content -->
 <div id="parent-container">
@@ -7,7 +7,7 @@
 </div>
 
 <!-- Footer -->
-<!-- <app-footer [style]="layoutStyle" (selectLayoutEvent)="setLayout($event)"></app-footer> -->
+<app-footer [style]="layoutStyle"></app-footer>
 
 <!-- Transition Overlay -->
-<!-- <app-transition [showOverlay]="changingLayout"></app-transition> -->
+<app-transition [showOverlay]="changingLayout"></app-transition>
