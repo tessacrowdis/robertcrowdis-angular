@@ -2,19 +2,29 @@
 
   <!-- Custom Styling -->
   <div id="custom-toolbar" *ngIf="style === 'custom'">
-    <span class="toolbar-option" [routerLink]="['/', 'home']" routerLinkActive="router-link-active">Home</span>
-    <span class="toolbar-spacer"> | </span>
-    <span class="toolbar-option" [routerLink]="['/', 'work']" routerLinkActive="router-link-active">Work</span>
-    <span class="toolbar-spacer"> | </span>
-    <span class="toolbar-option" [routerLink]="['/', 'about']" routerLinkActive="router-link-active">About</span>
+    <div class="empty-space"></div>
+    <div>
+      <span class="toolbar-option" [routerLink]="['/', 'home']" routerLinkActive="router-link-active">Home</span>
+      <!-- <span class="toolbar-spacer"> | </span> -->
+      <!-- <span class="toolbar-option" [routerLink]="['/', 'work']" routerLinkActive="router-link-active">Work</span> -->
+      <!-- <span class="toolbar-spacer"> | </span> -->
+      <!-- <span class="toolbar-option" [routerLink]="['/', 'about']" routerLinkActive="router-link-active">About</span> -->
+    </div>
+    <button class="custom-swap" mat-button matTooltip="Swap to Angular Material style and layout" (click)="selectLayout('material')">
+      <mat-icon>loop</mat-icon>
+    </button>
+
   </div>
 
   <!-- Material Styling -->
-  <mat-toolbar id="material-toolbar" *ngIf="style === 'material'">
+  <mat-toolbar id="material-toolbar" *ngIf="style === 'material'" color="primary">
     <span>{{pageTitle}}</span>
     <span class="spacer"></span>
-    <button mat-button [routerLink]="['/', 'home']" routerLinkActive="router-link-active">Home</button>
-    <button mat-button [routerLink]="['/', 'work']" routerLinkActive="router-link-active">Work</button>
-    <button mat-button [routerLink]="['/', 'about']" routerLinkActive="router-link-active">About</button>
+    <button mat-button class="toolbar-option" [routerLink]="['/', 'home']" routerLinkActive="router-link-active">Home</button>
+    <!-- <button mat-button class="toolbar-option" [routerLink]="['/', 'work']" routerLinkActive="router-link-active">Work</button> -->
+    <!-- <button mat-button class="toolbar-option" [routerLink]="['/', 'about']" routerLinkActive="router-link-active">About</button> -->
+    <button mat-button matTooltip="Swap to the default style and layout" (click)="selectLayout('custom')">
+      <mat-icon>loop</mat-icon>
+    </button>
   </mat-toolbar>
 </div>

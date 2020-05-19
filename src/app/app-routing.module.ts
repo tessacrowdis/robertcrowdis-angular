@@ -24,11 +24,11 @@ const routes: Routes = [
     component: AboutComponent,
     data: { title: 'Work' }
   },
-  {
-    path: '**',
-    component: AboutComponent,
-    data: { title: 'DNE' }
-  }
+  // {
+  //   path: '**',
+  //   component: AboutComponent,
+  //   data: { title: 'DNE' }
+  // }
 ];
 
 @NgModule({

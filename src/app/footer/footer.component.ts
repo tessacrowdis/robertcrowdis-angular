@@ -1,5 +1,4 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
-import { LayoutService } from '../core/services/layout.service';
 
 @Component({
   selector: 'app-footer',
@@ -9,19 +8,9 @@ import { LayoutService } from '../core/services/layout.service';
 export class FooterComponent implements OnInit {
 
   @Input() style: string;
-  @Output() selectLayoutEvent: EventEmitter<string> = new EventEmitter();
 
   constructor() { }
 
   ngOnInit(): void { }
-
-  /**
-   * Emits an event to change the style of the application.
-   *
-   * @param layoutType String containing the style to set the application as ('material', or 'custom').
-   */
-  public selectLayout(layoutType: string): void {
-    this.selectLayoutEvent.emit(layoutType.toLowerCase());
-  }
 
 }

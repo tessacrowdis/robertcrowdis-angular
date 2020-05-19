@@ -1,11 +1,13 @@
 #custom-toolbar {
+  box-sizing: border-box;
   height: 64px;
+  padding: 0 1vw;
   width: 100%;
   color: white;
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
 
   .toolbar-option {
     padding: 8px 12px;
@@ -24,9 +26,11 @@
   .toolbar-spacer {
     margin: auto 20px;
   }
+  
+  .empty-space {
+    width: 64px;
+  }
 }
-
-
 
 .spacer {
   flex: 1 1 auto;
@@ -34,6 +38,11 @@
 
 #material-toolbar {
   > .router-link-active {
-    background-color: darkgray;
+    background-color: rgba(0,0,0,0.2);
+  }
+
+  .toolbar-option {
+    // padding: 8px 12px;
+    margin: auto 8px;
   }
 }

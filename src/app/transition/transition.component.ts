@@ -16,7 +16,7 @@ import { trigger, state, style, transition, animate, sequence } from '@angular/a
         animate(250),
       ]),
       transition(':leave', [
-        animate(500, style({ opacity: 1 })),
+        animate(750, style({ opacity: 1 })),
         animate(250, style({ opacity: 0 }))
       ])
     ])

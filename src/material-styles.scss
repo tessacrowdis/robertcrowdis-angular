@@ -1,0 +1,21 @@
+// This is the material styling for the website.
+@import './scss/colors';
+
+body {
+  background-color: $material-background;
+  color: $material-font-color;
+}
+
+a {
+  &:link {
+    color: $material-primary;
+  }
+
+  &:hover {
+    color: $material-primary-lighter;
+  }
+
+  &:visited {
+    color: $material-primary-darker;
+  }
+}
