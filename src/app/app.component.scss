@@ -1,3 +1,4 @@
 #parent-container {
   padding: 4vw 10vw;
+  height: calc(64px - 100%); // Take into account the height from the toolbar
 }
