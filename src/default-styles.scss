@@ -6,6 +6,10 @@ body {
   color: $default-font-color;
 }
 
+#footer {
+  background-color: $default-footer-background;
+}
+
 a {
   &:link {
     color: $default-primary;
