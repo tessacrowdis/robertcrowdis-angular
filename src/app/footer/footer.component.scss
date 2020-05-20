@@ -1,21 +1,14 @@
 @import '../../scss/colors';
 
 #footer {
-  position: absolute;
-  display: block;
+  // Background color is set dynamically through loaded stylesheets. See 'LayoutService' for how they are loaded.
+  position: fixed;
+  bottom: 0;
   text-align: center;
-  height: 48px;
-  bottom: 0px;
-  background-color: transparent; // TODO: Set this in the future, once my palette is decided on - RC 5/15/20
+  padding: 8px;
   width: 100%;
 }
 
 #footnote {
   font-size: 12px;
-}
-
-@media (max-width: 800px) {
-  #footer {
-    position: relative;
-  }
 }
