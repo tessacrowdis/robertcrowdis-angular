@@ -1,0 +1,31 @@
+.card-container {
+  display: flex;
+  flex-direction: row;
+}
+
+.experience-logo {
+  // margin: auto 20px auto 0;
+  height: 200px;
+  // width: 200px;
+  object-fit: scale-down;
+}
+
+mat-card {
+  display: flex;
+  flex-direction: column;
+  max-width: 400px;
+  margin: 20px;
+}
+
+
+@media (max-width: 800px) {
+
+  .experience-container {
+    flex-direction: column;
+    margin: 8vw auto;
+  }
+
+  .experience-logo {
+    margin: auto auto 20px auto;
+  }
+}

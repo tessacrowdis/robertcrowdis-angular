@@ -1,0 +1,32 @@
+.experience-container {
+  display: flex;
+  flex-direction: row;
+  margin: 4vw auto;
+  padding: 20px;
+  border-radius: 4px;
+  border: 1px gray solid;
+  width: 80%;
+}
+
+.experience-logo {
+  margin: auto 20px auto 0;
+  height: 200px;
+  width: 200px;
+  object-fit: cover;
+}
+
+.experince-text-wrapper {
+
+}
+
+@media (max-width: 800px) {
+
+  .experience-container {
+    flex-direction: column;
+    margin: 8vw auto;
+  }
+
+  .experience-logo {
+    margin: auto auto 20px auto;
+  }
+}

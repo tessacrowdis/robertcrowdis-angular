@@ -1,0 +1,12 @@
+<ng-container *ngIf="experiences != null">
+  <!-- Experiences -->
+  <div class="experience-container" *ngFor="let experience of experiences">
+    <img class="experience-logo" [src]="experience.thumbnail">
+    <div class="experience-text-wrapper">
+      <h3>{{experience.companyName}}</h3>
+      <h4>{{experience.title}}</h4>
+      <p>{{experience.dateStart}} to {{experience.dateEnd}}</p>
+      <p>{{experience.description}}</p>
+    </div>
+  </div>
+</ng-container>
