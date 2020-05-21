@@ -56,6 +56,8 @@ p > span {
   .about-row {
     flex-direction: column;
     img {
+      height: auto;
+      width: 80%;
       margin: auto;
     }
     section {

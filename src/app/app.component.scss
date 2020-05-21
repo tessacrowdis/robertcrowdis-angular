@@ -1,3 +1,23 @@
 #parent-container {
   padding: 4vw 10vw;
+  min-height: calc(64px - 100%); // Take into account the height from the toolbar
+}
+
+mat-sidenav-container {
+  height: 100%;
+}
+
+mat-sidenav {
+  min-width: 248px;
+}
+
+mat-icon {
+  padding-right: 12px;
+}
+
+@media (max-width: 800px) {
+  #parent-container {
+    padding: 2vw 4vw;
+    min-height: calc(100% + 24px) // Give breathing room on mobile for thumb;
+  }
 }

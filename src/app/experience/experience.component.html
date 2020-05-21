@@ -1,0 +1,4 @@
+<div id="experience">
+  <app-experience-default [experiences]="experience" *ngIf="layout === 'custom'"></app-experience-default>
+  <app-experience-material [experiences]="experience" *ngIf="layout === 'material'"></app-experience-material>
+</div>

@@ -1,13 +1,47 @@
-<!-- Toolbar -->
-<app-toolbar [style]="layoutStyle" [pageTitle]="pageTitle" (selectLayoutEvent)="setLayout($event)"></app-toolbar>
+<mat-sidenav-container>
 
-<!-- Page Content -->
-<div id="parent-container">
-  <router-outlet></router-outlet>
-</div>
+  <!-- Mat Sidenav Drawer - ONLY FOR Material Styling Layout -->
+  <mat-sidenav #drawer mode="over">
+    <mat-toolbar color="primary">{{pageTitle}}</mat-toolbar>
+    <mat-nav-list>
+      <h3 mat-subheader>Pages</h3>
+      <a mat-list-item [routerLink]="['/']" routerLinkActive="router-link-active" (click)="drawer.close()">
+        <mat-icon>home</mat-icon> About
+      </a>
+      <a mat-list-item [routerLink]="['/', 'experience']" routerLinkActive="router-link-active"
+        (click)="drawer.close()">
+        <mat-icon>list</mat-icon> Experience
+      </a>
+    </mat-nav-list>
+    <p mat-line></p>
+    <mat-nav-list>
+      <h3 mat-subheader>My Profiles</h3>
+      <a mat-list-item href="https://github.com/RobertCrowdis" target="_blank">
+        <mat-icon>code</mat-icon>Github</a>
+      <a mat-list-item href="https://www.linkedin.com/in/robertcrowdis/" target="_blank">
+        <mat-icon>person_pin</mat-icon>LinkedIn</a>
+      <a mat-list-item href="https://twitter.com/RobertCrowdis" target="_blank">
+        <mat-icon>add_comment</mat-icon>Twitter</a>
+    </mat-nav-list>
+  </mat-sidenav>
 
-<!-- Footer -->
-<app-footer [style]="layoutStyle"></app-footer>
+  <!-- Page Content -->
+  <mat-sidenav-content>
+
+    <!-- Toolbar -->
+    <app-toolbar [style]="layoutStyle" [pageTitle]="pageTitle" (selectLayoutEvent)="setLayout($event)"
+      (toggleSidenavEvent)="drawer.toggle()"></app-toolbar>
+
+    <!-- Page Content -->
+    <div id="parent-container">
+      <router-outlet></router-outlet>
+    </div>
+
+    <!-- Footer -->
+    <app-footer [style]="layoutStyle"></app-footer>
+  </mat-sidenav-content>
+
+</mat-sidenav-container>
 
 <!-- Transition Overlay -->
 <app-transition [showOverlay]="changingLayout"></app-transition>

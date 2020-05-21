@@ -6,28 +6,32 @@ import { AppRoutingModule } from './app-routing.module';
 import { CoreModule } from './core/core.module';
 import { MaterialModule } from './shared/material.module';
 import { SharedModule } from './shared/shared.module';
+
 import { AboutModule } from './about/about.module';
+import { ExperienceModule } from './experience/experience.module';
+import { ToolbarModule } from './toolbar/toolbar.module';
 
 import { AppComponent } from './app.component';
 import { FooterComponent } from './footer/footer.component';
-import { ToolbarComponent } from './toolbar/toolbar.component';
 import { TransitionComponent } from './transition/transition.component';
+
 
 @NgModule({
   declarations: [
     AppComponent,
     FooterComponent,
-    ToolbarComponent,
-    TransitionComponent
+    TransitionComponent,
   ],
   imports: [
     AboutModule,
     BrowserModule,
     CoreModule.forRoot(),
+    ExperienceModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     MaterialModule,
-    SharedModule
+    SharedModule,
+    ToolbarModule
   ],
   providers: [
     Title

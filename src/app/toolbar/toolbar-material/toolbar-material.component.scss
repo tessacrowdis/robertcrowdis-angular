@@ -1,0 +1,45 @@
+@import '../../../scss/colors';
+
+.router-link-active {
+  background-color: rgba(0,0,0,0.2);
+}
+
+.page-title {
+  display: block;
+  margin-right: 16px;
+}
+
+.toolbar-option {
+  display: block;
+  &.external-link {
+    height: 24px;
+    width: 24px;
+    margin: auto 8px;
+    &:hover {
+      cursor: pointer;
+      filter: drop-shadow(2px 2px 10px white);
+    }
+  }
+}
+
+#sidenav-toggle {
+  display: none;
+}
+
+.spacer {
+  flex: 1 1 auto;
+}
+
+@media (max-width: 800px) {
+  #sidenav-toggle {
+    display: block;
+  }
+
+  .toolbar-option {
+    display: none !important;
+  }
+
+  .page-title {
+    display: none;
+  }
+}

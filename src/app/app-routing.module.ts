@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
 import { AboutComponent } from './about/about.component';
+import { ExperienceComponent } from './experience/experience.component';
 
 const routes: Routes = [
   {
@@ -15,9 +16,9 @@ const routes: Routes = [
     data: { title: 'Home'}
   },
   {
-    path: 'about',
-    component: AboutComponent,
-    data: { title: 'About' }
+    path: 'experience',
+    component: ExperienceComponent,
+    data: { title: 'Experience' }
   },
   { // TODO: Swap this route out with the proper page once it is completed - RC 5/18/20
     path: 'work',
