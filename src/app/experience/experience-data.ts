@@ -19,8 +19,8 @@ export const EXPERIENCE: Array<Experience> = [
     competitors' content on Giphy and Tenor. My responsibilities included planning, documenting, and creating the
     project and all of its related technology.`,
     title: 'Software Engineer',
-    dateStart: new Date('2019-11-1T00:00:00'),
-    dateEnd: new Date('2019-11-1T00:00:00'),
+    dateStart: new Date('2019-11-11T00:00:00'),
+    dateEnd: new Date('2012-11-11T00:00:00'),
   },
   {
     companyName: 'Fitscript',
@@ -31,8 +31,8 @@ export const EXPERIENCE: Array<Experience> = [
     to help the sales team manage the company’s customers, and provide analytics to drive the marketing team decisions.
     Maintained legacy code and oversaw the migration of new features into customer facing applications.`,
     title: 'Software Engineer',
-    dateStart: new Date('2019-11-1T00:00:00'),
-    dateEnd: new Date('2019-11-1T00:00:00'),
+    dateStart: new Date('2019-02-11T00:00:00'),
+    dateEnd: new Date('2019-11-11T00:00:00'),
   },
   {
     companyName: 'Checkmate Digital',
@@ -42,7 +42,7 @@ export const EXPERIENCE: Array<Experience> = [
     companies. Constantly met with the company's clients to gather feedback on their products and provide updates,
     and pass feedback to the rest of the development team.`,
     title: 'Software Engineer',
-    dateStart: new Date('2019-11-1T00:00:00'),
-    dateEnd: new Date('2019-11-1T00:00:00'),
+    dateStart: new Date('2017-10-11T00:00:00'),
+    dateEnd: new Date('2019-01-11T00:00:00'),
   }
 ];

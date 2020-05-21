@@ -2,7 +2,8 @@
   <mat-card class="mat-elevation-z4" *ngFor="let experience of experiences">
     <img class="experience-logo" mat-card-image [src]="experience.thumbnail">
     <mat-card-title>{{experience.companyName}}</mat-card-title>
-    <mat-card-subtitle>{{experience.title}} - from {{experience.dateStart}} to {{experience.dateEnd}}
+    <mat-card-subtitle>{{experience.title}} - from {{experience.dateStart | date:'MMM yyyy'}} to
+      {{experience.dateEnd | date:'MMM yyyy'}}
     </mat-card-subtitle>
     <mat-card-content>{{experience.description}}</mat-card-content>
     <mat-card-actions>
