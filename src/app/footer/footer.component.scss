@@ -1,8 +1,13 @@
 @import '../../scss/colors';
 
+#footer, #footnote {
+  display: block;
+}
+
 #footer {
   // Background color is set dynamically through loaded stylesheets. See 'LayoutService' for how they are loaded.
   position: fixed;
+  box-sizing: border-box;
   bottom: 0;
   text-align: center;
   padding: 8px;
@@ -11,4 +16,12 @@
 
 #footnote {
   font-size: 12px;
+}
+
+
+@media (max-width: 800px) {
+  #footer, #footnote {
+    position: relative;
+  }
+
 }
