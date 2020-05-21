@@ -1,7 +1,7 @@
 // This is the default styling for the website.
 @import './scss/colors';
 
-body {
+body, mat-sidenav-content {
   background-color: $default-background;
   color: $default-font-color;
 }
