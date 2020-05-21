@@ -9,10 +9,10 @@ import { SharedModule } from './shared/shared.module';
 
 import { AboutModule } from './about/about.module';
 import { ExperienceModule } from './experience/experience.module';
+import { ToolbarModule } from './toolbar/toolbar.module';
 
 import { AppComponent } from './app.component';
 import { FooterComponent } from './footer/footer.component';
-import { ToolbarComponent } from './toolbar/toolbar.component';
 import { TransitionComponent } from './transition/transition.component';
 
 
@@ -20,8 +20,7 @@ import { TransitionComponent } from './transition/transition.component';
   declarations: [
     AppComponent,
     FooterComponent,
-    ToolbarComponent,
-    TransitionComponent
+    TransitionComponent,
   ],
   imports: [
     AboutModule,
@@ -31,7 +30,8 @@ import { TransitionComponent } from './transition/transition.component';
     AppRoutingModule,
     BrowserAnimationsModule,
     MaterialModule,
-    SharedModule
+    SharedModule,
+    ToolbarModule
   ],
   providers: [
     Title
