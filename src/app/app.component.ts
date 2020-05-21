@@ -1,6 +1,7 @@
-import { Component, OnDestroy, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit, ViewChild } from '@angular/core';
 import { Router, ActivatedRoute, NavigationEnd } from '@angular/router';
 import { Title } from '@angular/platform-browser';
+import { MatSidenav } from '@angular/material/sidenav';
 
 import { LayoutService } from './core/services/layout.service';
 
@@ -14,6 +15,8 @@ import { filter, map } from 'rxjs/operators';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnInit, OnDestroy {
+
+  @ViewChild('drawer', { static: true }) drawer: MatSidenav;
 
   private _layoutSubscription$: Subscription;
   private _transitionStateSubscription$: Subscription;
@@ -65,8 +68,12 @@ export class AppComponent implements OnInit, OnDestroy {
     });
   }
 
+  /**
+   * Unsubscribe from subscriptions on component cleanup.
+   */
   ngOnDestroy() {
     if (this._layoutSubscription$) { this._layoutSubscription$.unsubscribe(); }
+    if (this._transitionStateSubscription$) { this._transitionStateSubscription$.unsubscribe(); }
   }
 
   /**
@@ -76,6 +83,10 @@ export class AppComponent implements OnInit, OnDestroy {
    */
   public setLayout(layoutStyle: string) {
     this._ls.setLayout(layoutStyle);
+  }
+
+  public toggleDrawer() {
+    this.drawer.toggle();
   }
 
 }
