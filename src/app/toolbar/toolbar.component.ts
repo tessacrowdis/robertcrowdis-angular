@@ -10,6 +10,7 @@ export class ToolbarComponent implements OnInit {
   @Input() style: string;
   @Input() pageTitle: string;
   @Output() selectLayoutEvent: EventEmitter<string> = new EventEmitter();
+  @Output() toggleSidenavEvent: EventEmitter<void> = new EventEmitter();
 
   constructor() { }
 
@@ -22,6 +23,10 @@ export class ToolbarComponent implements OnInit {
    */
   public selectLayout(layoutType: string): void {
     this.selectLayoutEvent.emit(layoutType.toLowerCase());
+  }
+
+  public toggleSidenav(): void {
+    this.toggleSidenavEvent.emit();
   }
 
 }

@@ -1,30 +1,6 @@
 <div id="toolbar">
-
-  <!-- Custom Styling -->
-  <div id="custom-toolbar" *ngIf="style === 'custom'">
-    <div class="empty-space"></div>
-    <div>
-      <span class="toolbar-option" [routerLink]="['/', 'home']" routerLinkActive="router-link-active">Home</span>
-      <span class="toolbar-spacer"> | </span>
-      <span class="toolbar-option" [routerLink]="['/', 'experience']" routerLinkActive="router-link-active">Experience</span>
-      <!-- <span class="toolbar-spacer"> | </span> -->
-      <!-- <span class="toolbar-option" [routerLink]="['/', 'about']" routerLinkActive="router-link-active">About</span> -->
-    </div>
-    <button class="custom-swap" mat-button matTooltip="Swap to Angular Material style and layout" (click)="selectLayout('material')">
-      <mat-icon>loop</mat-icon>
-    </button>
-
-  </div>
-
-  <!-- Material Styling -->
-  <mat-toolbar id="material-toolbar" class="mat-elevation-z4" *ngIf="style === 'material'" color="primary">
-    <span>{{pageTitle}}</span>
-    <span class="spacer"></span>
-    <button mat-button class="toolbar-option" [routerLink]="['/', 'home']" routerLinkActive="router-link-active">Home</button>
-    <button mat-button class="toolbar-option" [routerLink]="['/', 'experience']" routerLinkActive="router-link-active">Experience</button>
-    <!-- <button mat-button class="toolbar-option" [routerLink]="['/', 'about']" routerLinkActive="router-link-active">About</button> -->
-    <button mat-button matTooltip="Swap to the default style and layout" (click)="selectLayout('custom')">
-      <mat-icon>loop</mat-icon>
-    </button>
-  </mat-toolbar>
+  <app-toolbar-default *ngIf="style === 'custom'" (layoutDefClickEvent)="selectLayout($event)">
+  </app-toolbar-default>
+  <app-toolbar-material *ngIf="style === 'material'" (layoutMatClickEvent)="selectLayout($event)"
+    (sidenavClickEvent)="toggleSidenav()" [pageTitle]="pageTitle"></app-toolbar-material>
 </div>
