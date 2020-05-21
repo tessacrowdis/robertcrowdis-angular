@@ -5,7 +5,7 @@
     <div class="experience-text-wrapper">
       <h3>{{experience.companyName}}</h3>
       <h4>{{experience.title}}</h4>
-      <p>{{experience.dateStart | date:'MMM yyyy'}} to {{experience.dateEnd | date:'MMM yyyy'}}</p>
+      <p>{{experience.dateStart | date:'MMM yyyy'}} to {{experience.dateEnd != null ? (experience.dateEnd | date:'MMM yyyy') : 'Present'}}</p>
       <p>{{experience.description}}</p>
     </div>
   </div>
