@@ -44,19 +44,16 @@ export class LayoutService {
   private _appendNewStyling(layout: string): void {
     const cssFile = layout === 'material' ? 'material.css' : 'default.css';
     const headEl = this._document.getElementsByTagName('head')[0];
-    console.log(headEl);
 
     const existingLinkEl = this._document.getElementById('client-theme') as HTMLLinkElement;
 
     if (existingLinkEl) {
-      console.log(cssFile);
       existingLinkEl.href = cssFile;
     } else {
       const newLinkEl = this._document.createElement('link');
       newLinkEl.id = 'client-theme';
       newLinkEl.rel = 'stylesheet';
       newLinkEl.href = cssFile;
-      console.log(newLinkEl);
 
       headEl.appendChild(newLinkEl);
     }
