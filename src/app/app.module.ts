@@ -14,6 +14,8 @@ import { ToolbarModule } from './toolbar/toolbar.module';
 import { AppComponent } from './app.component';
 import { FooterComponent } from './footer/footer.component';
 import { TransitionComponent } from './transition/transition.component';
+import { ServiceWorkerModule } from '@angular/service-worker';
+import { environment } from '../environments/environment';
 
 
 @NgModule({
@@ -31,7 +33,8 @@ import { TransitionComponent } from './transition/transition.component';
     BrowserAnimationsModule,
     MaterialModule,
     SharedModule,
-    ToolbarModule
+    ToolbarModule,
+    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
   ],
   providers: [
     Title

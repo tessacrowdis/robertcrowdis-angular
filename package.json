@@ -7,7 +7,8 @@
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "start-http": "http-server -p 4200 -c-1 dist/robertcrowdis-angular"
   },
   "private": true,
   "dependencies": {
@@ -21,13 +22,14 @@
     "@angular/platform-browser": "~9.1.6",
     "@angular/platform-browser-dynamic": "~9.1.6",
     "@angular/router": "~9.1.6",
+    "@angular/service-worker": "~9.1.6",
     "core-js": "^2.5.4",
     "rxjs": "~6.5.5",
     "tslib": "^1.10.0",
     "zone.js": "~0.10.2"
   },
   "devDependencies": {
-    "@angular-devkit/build-angular": "~0.901.5",
+    "@angular-devkit/build-angular": "^0.901.7",
     "@angular/cli": "~9.1.5",
     "@angular/compiler-cli": "~9.1.6",
     "@angular/language-service": "~9.1.6",
@@ -35,6 +37,7 @@
     "@types/jasminewd2": "~2.0.3",
     "@types/node": "^12.11.1",
     "codelyzer": "^5.1.2",
+    "http-server": "^0.12.3",
     "jasmine-core": "~2.99.1",
     "jasmine-spec-reporter": "~4.2.1",
     "karma": "^5.0.5",
