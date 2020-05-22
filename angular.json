@@ -30,7 +30,8 @@
                 "glob": "_redirects",
                 "input": "src",
                 "output": "/"
-              }
+              },
+              "src/manifest.webmanifest"
             ],
             "extractCss": true,
             "styles": [
@@ -75,7 +76,9 @@
                   "type": "anyComponentStyle",
                   "maximumWarning": "6kb"
                 }
-              ]
+              ],
+              "serviceWorker": true,
+              "ngswConfigPath": "ngsw-config.json"
             }
           }
         },
@@ -109,7 +112,8 @@
             "scripts": [],
             "assets": [
               "src/favicon.ico",
-              "src/assets"
+              "src/assets",
+              "src/manifest.webmanifest"
             ]
           }
         },
