@@ -1,8 +1,8 @@
 {
-  "name": "robertcrowdis-angular",
-  "short_name": "robertcrowdis-angular",
-  "theme_color": "#1976d2",
-  "background_color": "#fafafa",
+  "name": "Robert Crowdis",
+  "short_name": "RC Website",
+  "theme_color": "orange",
+  "background_color": "#2E2A27",
   "display": "standalone",
   "scope": "./",
   "start_url": "./",
