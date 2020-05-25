@@ -2,6 +2,7 @@ import { Component, OnInit, OnDestroy } from '@angular/core';
 import { LayoutService } from '../core/services/layout.service';
 import { Subscription } from 'rxjs';
 
+
 @Component({
   selector: 'app-about',
   templateUrl: './about.component.html',
