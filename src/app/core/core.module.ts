@@ -2,6 +2,7 @@ import { NgModule, ModuleWithProviders } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 import { LayoutService } from './services/layout.service';
+import { StarReposService } from './services/star-repos.service';
 
 
 /**
@@ -13,7 +14,8 @@ import { LayoutService } from './services/layout.service';
     CommonModule,
   ],
   providers: [
-    LayoutService
+    LayoutService,
+    StarReposService
   ]
 })
 export class CoreModule {
