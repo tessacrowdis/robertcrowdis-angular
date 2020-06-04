@@ -61,19 +61,19 @@ export class LayoutService {
 
   /**
    * Fetches the user's last selected layout preference from local storage and sets the website style accordingly.
-   * If no layout is found, then the default will be set as 'custom' in local storage and in the application.
+   * If no layout is found, then the default will be set as 'material' in local storage and in the application.
    */
   public instantiateLayout(): void {
     const layout = String(localStorage.getItem('layout'));
-    if (layout === 'material') {
-      this._layout$.next('material');
-      this._appendNewStyling('material');
+    if (layout === 'custom') {
+      this._layout$.next('custom');
+      this._appendNewStyling('custom');
     } else {
       if (layout === 'null' || layout === 'undefined') {
-        localStorage.setItem('layout', 'custom');
+        localStorage.setItem('layout', 'material');
       }
-      this._appendNewStyling('custom');
-      this._layout$.next('custom');
+      this._appendNewStyling('material');
+      this._layout$.next('material');
     }
   }
 
